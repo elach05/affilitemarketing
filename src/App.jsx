@@ -316,25 +316,7 @@ export default function App() {
               </div>
               
               {/* Floating Badges */}
-              <div style={{
-                position: 'absolute',
-                bottom: '-20px',
-                left: '30px',
-                backgroundColor: '#ffffff',
-                color: '#0f172a',
-                padding: '0.8rem 1.5rem',
-                borderRadius: '50px',
-                fontWeight: '700',
-                fontSize: '0.85rem',
-                boxShadow: '0 10px 15px rgba(0,0,0,0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                zIndex: '3'
-              }}>
-                <span style={{color: '#38b6ff', fontSize: '1.2rem'}}>✔</span> 
-                <span>Updated Content</span>
-              </div>
+              
             </div>
           </div>
         </section>
