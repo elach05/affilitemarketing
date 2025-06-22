@@ -164,7 +164,7 @@ export default function App() {
 
     /* (اختياري) إزالة العلامة على جميع الأجهزة إذا لزم الأمر */
     .hero h1::before {
-      display: none;
+      display: none !important;
     }
   `}
 </style>
