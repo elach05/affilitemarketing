@@ -139,7 +139,8 @@ export default function App() {
   color: '#ffffff',
   textShadow: '0 2px 10px rgba(0,0,0,0.3)',
   position: 'relative',
-  width: 'fit-content'
+  display: 'inline-block',
+  overflow: 'hidden' // أضف هذا السطر
 }}>
   Master Affiliate Marketing <br/>
   <span style={{
