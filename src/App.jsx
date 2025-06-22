@@ -12,13 +12,15 @@ export default function App() {
     <>
       <Header />
 
-      <main id="home" className="home" style={{ 
-        fontFamily: "'Poppins', sans-serif",
-        backgroundColor: '#0f172a', // Dark blue background
-        color: '#ffffff', // White text
-        lineHeight: '1.6',
-        overflowX: 'hidden'
-      }}>
+     <main id="home" className="home" style={{ 
+  fontFamily: "'Poppins', sans-serif",
+  backgroundColor: '#0f172a',
+  color: '#ffffff',
+  lineHeight: '1.6',
+  overflowX: 'hidden',
+  maxWidth: '100%', // إضافة هذه السطر
+  width: '100%' // إضافة هذه السطر
+}}>
         {/* Hero Section */}
         <section className="hero" style={{ 
           background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
@@ -428,13 +430,14 @@ export default function App() {
               What You'll Discover Inside
             </h2>
             
-            <div style={{ 
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '2rem',
-              maxWidth: '1000px',
-              margin: '0 auto'
-            }}>
+           <div style={{ 
+  display: 'grid',
+  gridTemplateColumns: window.innerWidth < 768 ? '1fr' : 'repeat(auto-fit, minmax(300px, 1fr))',
+  gap: '2rem',
+  maxWidth: '1000px',
+  margin: '0 auto'
+}}>
+           
               {[
                 {
                   title: "Automated Income",
@@ -499,16 +502,13 @@ export default function App() {
           overflow: 'hidden'
         }}>
           {/* Decorative elements */}
-          <div style={{
-            position: 'absolute',
-            top: '-100px',
-            right: '-100px',
-            width: '300px',
-            height: '300px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(56,182,255,0.05) 0%, rgba(56,182,255,0) 70%)',
-            zIndex: '1'
-          }}></div>
+        <div style={{ 
+  display: 'grid',
+  gridTemplateColumns: window.innerWidth < 768 ? '1fr' : 'repeat(auto-fit, minmax(300px, 1fr))',
+  gap: '2rem',
+  maxWidth: '1000px',
+  margin: '0 auto'
+}}></div>
           
           <div className="container" style={{ 
             maxWidth: '1200px',
@@ -713,6 +713,33 @@ export default function App() {
             --yellow: #fbbf24;
           }
         `}
+        <style>
+  {`
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem !important;
+        text-align: center;
+      }
+      .hero p {
+        font-size: 1.1rem !important;
+        max-width: 100% !important;
+        text-align: center;
+      }
+      .hero-text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .benefits h2, .testimonials h2, .cta h2 {
+        font-size: 2rem !important;
+      }
+      .container {
+        padding: 0 1rem !important;
+      }
+    }
+  `}
+</style>
       </style>
     </>
   );

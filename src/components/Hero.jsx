@@ -10,3 +10,16 @@ export default function Hero() {
     </div>
   );
 }
+<div className="container" style={{ 
+  maxWidth: '1200px',
+  margin: '0 auto',
+  padding: '0 2rem',
+  position: 'relative',
+  zIndex: '2',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  flexWrap: 'wrap', // تغيير من 'wrap' إلى 'wrap'
+  gap: '4rem',
+  flexDirection: window.innerWidth < 768 ? 'column' : 'row' // إضافة شرط للهاتف
+}}></div>
