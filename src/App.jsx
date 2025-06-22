@@ -710,11 +710,7 @@ export default function App() {
         width: 100%;
       }
       
-      .hero h1 span {
-        display: inline-block;
-        margin-top: 0.5rem;
-      }
-      
+     
       .hero p {
         font-size: 1rem !important;
         text-align: center;
