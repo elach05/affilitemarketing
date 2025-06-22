@@ -85,8 +85,7 @@ export default function App() {
     gap: '0.5rem',
     marginBottom: '2rem'
   }}>
-    <span style={{color: '#38b6ff', fontSize: '1.2rem'}}>✔</span> 
-    <span>Updated Content</span>
+   
   </div>
 )}
 {/* نهاية الجزء الجديد */}
