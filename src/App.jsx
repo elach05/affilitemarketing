@@ -149,6 +149,26 @@ export default function App() {
     display: 'inline-block'
   }}>Like a Pro</span>
 </h1>
+<style>
+  {`
+    /* إزالة العلامة البيضاء على الهاتف فقط */
+    @media (max-width: 768px) {
+      .hero h1::before,
+      .hero h1::after {
+        content: none !important;
+      }
+      
+      .hero h1 {
+        overflow: hidden;
+      }
+    }
+
+    /* (اختياري) إزالة العلامة على جميع الأجهزة إذا لزم الأمر */
+    .hero h1::before {
+      display: none;
+    }
+  `}
+</style>
               
               <p style={{ 
                 fontSize: '1.25rem',
