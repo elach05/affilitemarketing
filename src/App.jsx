@@ -148,8 +148,7 @@ export default function App() {
     position: 'relative',
     display: 'inline-block'
   }}>Like a Pro</span>
-</h1>
-<style>
+  <style>
   {`
     /* إزالة العلامة البيضاء على الهاتف فقط */
     @media (max-width: 768px) {
@@ -169,6 +168,8 @@ export default function App() {
     }
   `}
 </style>
+</h1>
+
               
               <p style={{ 
                 fontSize: '1.25rem',
