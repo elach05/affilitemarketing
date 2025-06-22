@@ -731,9 +731,13 @@ export default function App() {
       }
       
       /* إزالة النقطة البيضاء */
-      .hero h1::after {
-        display: none;
-      }
+     // أضف هذه الأنماط إلى قسم الـ media query
+.hero h1::before,
+.hero h1::after,
+.hero .decoration,
+.hero .white-element {
+  display: none !important;
+}
     }
   `}
 </style>
