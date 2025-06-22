@@ -196,17 +196,16 @@ export default function App() {
     }
   `}
 </style>
-              
               <h1 style={{ 
-                fontSize: '3.5rem',
-                fontWeight: '800',
-                marginBottom: '1.8rem',
-                lineHeight: '1.2',
-                color: '#ffffff',
-                textShadow: '0 2px 10px rgba(0,0,0,0.3)'
-              }}>
-                Master Affiliate Marketing <br/><span style={{color: '#38b6ff'}}>Like a Pro</span>
-              </h1>
+  fontSize: '3.5rem',
+  fontWeight: '800',
+  marginBottom: '1.8rem',
+  lineHeight: '1.2',
+  color: '#ffffff',
+  textShadow: '0 2px 10px rgba(0,0,0,0.3)'
+}}>
+  Master Affiliate Marketing <br/><span style={{color: '#38b6ff', position: 'relative'}}>Like a Pro</span>
+</h1>
               
               <p style={{ 
                 fontSize: '1.25rem',
@@ -713,30 +712,49 @@ export default function App() {
             --yellow: #fbbf24;
           }
         `}
-        <style>
+       <style>
   {`
+    /* تعديلات خاصة بالهاتف */
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 2.5rem !important;
+        font-size: 2.2rem !important;
         text-align: center;
+        line-height: 1.3 !important;
+        margin-bottom: 1.2rem !important;
+      }
+      .hero h1 span {
+        display: inline-block;
+        margin-top: 0.5rem;
       }
       .hero p {
-        font-size: 1.1rem !important;
-        max-width: 100% !important;
+        font-size: 1rem !important;
         text-align: center;
+        max-width: 100% !important;
+        margin-bottom: 1.5rem !important;
       }
       .hero-text {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
         align-items: center;
       }
-      .benefits h2, .testimonials h2, .cta h2 {
-        font-size: 2rem !important;
+      .hero-image {
+        min-width: 100% !important;
+        margin-top: 2rem;
       }
-      .container {
-        padding: 0 1rem !important;
-      }
+    }
+
+    /* تأثيرات إضافية لجعل النص جذابًا */
+    .hero h1 {
+      position: relative;
+      display: inline-block;
+    }
+    .hero h1::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #38b6ff, transparent);
+      opacity: 0.7;
     }
   `}
 </style>
