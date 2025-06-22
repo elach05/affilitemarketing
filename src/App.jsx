@@ -58,118 +58,38 @@ export default function App() {
               maxWidth: '600px',
               animation: 'fadeInUp 0.8s ease-out'
             }}>
-{/* استبدال Edition 2024 بهذا التصميم المبدع */}
-<div style={{
-  position: 'relative',
-  display: 'inline-block',
-  marginBottom: '2rem',
-  transformStyle: 'preserve-3d',
-  perspective: '1000px'
-}}>
+{/* بداية الجزء الجديد */}
+{window.innerWidth >= 768 && (
   <div style={{
     position: 'relative',
-    backgroundColor: 'rgba(56, 182, 255, 0.1)',
-    color: '#38b6ff',
-    padding: '0.7rem 1.5rem 0.7rem 3.5rem',
-    borderRadius: '30px',
-    fontSize: '0.95rem',
-    fontWeight: '700',
-    border: '1px solid rgba(56, 182, 255, 0.3)',
-    boxShadow: '0 4px 15px rgba(56, 182, 255, 0.1)',
-    transform: 'rotateY(-5deg)',
-    transition: 'all 0.4s ease',
-    ':hover': {
-      transform: 'rotateY(5deg) scale(1.03)',
-      boxShadow: '0 6px 20px rgba(56, 182, 255, 0.2)'
-    }
+    display: 'inline-block',
+    marginBottom: '2rem',
+    transformStyle: 'preserve-3d',
+    perspective: '1000px'
   }}>
-    {/* الشريط المضيء */}
-    <div style={{
-      position: 'absolute',
-      left: '0',
-      top: '0',
-      height: '100%',
-      width: '2.5rem',
-      backgroundColor: 'rgba(56, 182, 255, 0.3)',
-      borderTopLeftRadius: '30px',
-      borderBottomLeftRadius: '30px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      overflow: 'hidden'
-    }}>
-      <div style={{
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        background: 'linear-gradient(90deg, transparent, rgba(56, 182, 255, 0.7), transparent)',
-        animation: 'shine 2s infinite'
-      }}></div>
-      <span style={{
-        position: 'relative',
-        zIndex: '2',
-        fontSize: '1.2rem',
-        animation: 'pulse 2s infinite'
-      }}>✨</span>
-    </div>
-    
-    {/* النص مع تأثير ثلاثي الأبعاد */}
-    <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      gap: '0.8rem'
-    }}>
-      <span style={{
-        textShadow: '0 2px 5px rgba(56, 182, 255, 0.3)'
-      }}>PREMIUM EDITION</span>
-      <div style={{
-        position: 'relative',
-        width: '24px',
-        height: '24px'
-      }}>
-        <span style={{
-          position: 'absolute',
-          top: '0',
-          left: '0',
-          color: '#fbbf24',
-          textShadow: '0 0 8px rgba(251, 191, 36, 0.5)',
-          animation: 'spin 4s linear infinite'
-        }}>★</span>
-        <span style={{
-          position: 'absolute',
-          top: '0',
-          left: '0',
-          color: '#38b6ff',
-          animation: 'spinReverse 3s linear infinite'
-        }}>✧</span>
-      </div>
-    </div>
-    
-    {/* الشريط السفلي المتحرك */}
-    <div style={{
-      position: 'absolute',
-      bottom: '-3px',
-      left: '3.5rem',
-      right: '1.5rem',
-      height: '2px',
-      background: 'linear-gradient(90deg, #38b6ff, transparent)',
-      animation: 'widthGrow 3s infinite alternate'
-    }}></div>
+    {/* ... (نفس كود PREMIUM EDITION السابق هنا بالضبط) ... */}
   </div>
-  
-  {/* التأثيرات الجانبية */}
+)}
+
+{window.innerWidth < 768 && (
   <div style={{
-    position: 'absolute',
-    top: '50%',
-    left: '-15px',
-    transform: 'translateY(-50%)',
-    width: '10px',
-    height: '80%',
-    backgroundColor: 'rgba(56, 182, 255, 0.2)',
-    borderRadius: '5px',
-    filter: 'blur(1px)'
-  }}></div>
-</div>
+    backgroundColor: '#ffffff',
+    color: '#0f172a',
+    padding: '0.8rem 1.5rem',
+    borderRadius: '50px',
+    fontWeight: '700',
+    fontSize: '0.85rem',
+    boxShadow: '0 10px 15px rgba(0,0,0,0.2)',
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    marginBottom: '2rem'
+  }}>
+    <span style={{color: '#38b6ff', fontSize: '1.2rem'}}>✔</span> 
+    <span>Updated Content</span>
+  </div>
+)}
+{/* نهاية الجزء الجديد */}
 
 {/* إضافة هذه الأنيميشنز إلى قسم الستايل */}
 <style>
