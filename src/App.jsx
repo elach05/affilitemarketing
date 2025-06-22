@@ -678,8 +678,7 @@ export default function App() {
             --dark-blue: #0f172a;
             --navy-blue: #1e293b;
             --primary-blue: #38b6ff;
-            --white: #ffffff;
-            --light-gray: #e2e8f0;
+           
             --medium-gray: #94a3b8;
             --yellow: #fbbf24;
           }
