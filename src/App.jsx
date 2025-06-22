@@ -194,6 +194,19 @@ export default function App() {
       0% { width: 0%; opacity: 0; }
       100% { width: calc(100% - 3.5rem); opacity: 1; }
     }
+    @keyframes textShine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #38b6ff, #3b82f6, #38b6ff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: textShine 3s linear infinite;
+}  
   `}
 </style>
               <h1 style={{ 
