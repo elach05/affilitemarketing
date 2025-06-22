@@ -695,6 +695,36 @@ export default function App() {
       </main>
 
       <Footer />
+      <h1 style={{
+  fontSize: window.innerWidth < 768 ? '2.5rem' : '3.5rem',
+  fontWeight: '800',
+  background: 'linear-gradient(90deg, #fff, #38b6ff)',
+  WebkitBackgroundClip: 'text',
+  backgroundClip: 'text',
+  color: 'transparent',
+  textShadow: '0 2px 10px rgba(0,0,0,0.3)',
+  animation: 'pulse 2s infinite alternate'
+}}>
+  Master Affiliate Marketing <br/>
+  <span style={{
+    display: 'inline-block',
+    marginTop: '0.5rem',
+    animation: 'float 3s ease-in-out infinite'
+  }}>Like a Pro</span>
+</h1>
+
+<style>
+  {`
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  `}
+</style>
 
       {/* Global Styles and Animations */}
       <style>
