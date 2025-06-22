@@ -54,10 +54,13 @@ export default function App() {
             flexWrap: 'wrap',
             gap: '4rem'
           }}>
-            <div className="hero-text" style={{ 
-              maxWidth: '600px',
-              animation: 'fadeInUp 0.8s ease-out'
-            }}>
+<div className="hero-text" style={{ 
+  maxWidth: '600px',
+  animation: 'fadeInUp 0.8s ease-out',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start' // تغيير هذا إلى 'center' للهاتف
+}}>
 {/* بداية الجزء الجديد */}
 {window.innerWidth >= 768 && (
   <div style={{
@@ -128,15 +131,22 @@ export default function App() {
 }  
   `}
 </style>
-              <h1 style={{ 
+<h1 style={{ 
   fontSize: '3.5rem',
   fontWeight: '800',
   marginBottom: '1.8rem',
   lineHeight: '1.2',
   color: '#ffffff',
-  textShadow: '0 2px 10px rgba(0,0,0,0.3)'
+  textShadow: '0 2px 10px rgba(0,0,0,0.3)',
+  position: 'relative',
+  width: 'fit-content'
 }}>
-  Master Affiliate Marketing <br/><span style={{color: '#38b6ff', position: 'relative'}}>Like a Pro</span>
+  Master Affiliate Marketing <br/>
+  <span style={{
+    color: '#38b6ff',
+    position: 'relative',
+    display: 'inline-block'
+  }}>Like a Pro</span>
 </h1>
               
               <p style={{ 
@@ -674,49 +684,59 @@ export default function App() {
             --yellow: #fbbf24;
           }
         `}
-       <style>
+<style>
   {`
-    /* تعديلات خاصة بالهاتف */
+    /* تحسينات الهاتف */
     @media (max-width: 768px) {
+      .home {
+        padding: 0 1rem !important;
+      }
+      
+      .hero {
+        padding: 5rem 0 !important;
+      }
+      
+      .hero-text {
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
       .hero h1 {
         font-size: 2.2rem !important;
-        text-align: center;
         line-height: 1.3 !important;
         margin-bottom: 1.2rem !important;
+        text-align: center;
+        width: 100%;
       }
+      
       .hero h1 span {
         display: inline-block;
         margin-top: 0.5rem;
       }
+      
       .hero p {
         font-size: 1rem !important;
         text-align: center;
         max-width: 100% !important;
         margin-bottom: 1.5rem !important;
+        padding: 0 0.5rem;
       }
-      .hero-text {
-        align-items: center;
-      }
+      
       .hero-image {
         min-width: 100% !important;
         margin-top: 2rem;
+        padding: 0 1rem;
       }
-    }
-
-    /* تأثيرات إضافية لجعل النص جذابًا */
-    .hero h1 {
-      position: relative;
-      display: inline-block;
-    }
-    .hero h1::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, #38b6ff, transparent);
-      opacity: 0.7;
+      
+      .container {
+        padding: 0 1rem !important;
+      }
+      
+      /* إزالة النقطة البيضاء */
+      .hero h1::after {
+        display: none;
+      }
     }
   `}
 </style>
