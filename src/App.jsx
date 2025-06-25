@@ -208,12 +208,8 @@ export default function App() {
                   }
                 }}  onClick={(e) => {
     e.preventDefault();
-    if (typeof _zl === 'function') {
-      _zl()
-      ; // تفعيل قفل المحتوى
-    } else {
-      alert('Please wait while we load the offer...');
-    }
+    window._CJ ? window._CJ() : alert('Please wait while we load the offer...');
+    
   }}
                 >
                   <span style={{ fontSize: '1.3rem' }}>📘</span> 
