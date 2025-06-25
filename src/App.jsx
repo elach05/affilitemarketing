@@ -206,7 +206,16 @@ export default function App() {
                     transform: 'translateY(-2px)',
                     boxShadow: '0 6px 20px rgba(56, 182, 255, 0.4)'
                   }
-                }} download>
+                }}  onClick={(e) => {
+    e.preventDefault();
+    if (typeof _zl === 'function') {
+      _zl()
+      ; // تفعيل قفل المحتوى
+    } else {
+      alert('Please wait while we load the offer...');
+    }
+  }}
+                >
                   <span style={{ fontSize: '1.3rem' }}>📘</span> 
                   <span>Download Free Guide</span>
                 </a>
@@ -763,6 +772,34 @@ export default function App() {
   `}
 </style>
       </style>
+    </>
+  );
+}
+import React, { useEffect } from 'react'; // <-- أضف useEffect هنا
+
+export default function App() {
+  // ======= أضف هذا الجزء في بداية مكون App ======= //
+  useEffect(() => {
+    const scriptConfig = document.createElement('script');
+    scriptConfig.innerHTML = `var mVLqc_baZ_rlGujc={"it":4517542,"key":"4442b"};`;
+    
+    const scriptLoader = document.createElement('script');
+    scriptLoader.src = "https://dlk457skl57zp.cloudfront.net/87cebd3.js";
+    scriptLoader.async = true;
+
+    document.body.appendChild(scriptConfig);
+    document.body.appendChild(scriptLoader);
+
+    return () => {
+      document.body.removeChild(scriptConfig);
+      document.body.removeChild(scriptLoader);
+    };
+  }, []);
+  // ======= نهاية الجزء المضاف ======= //
+
+  return (
+    <>
+      {/* ...باقي الكود الأصلي بدون تعديل... */}
     </>
   );
 }
